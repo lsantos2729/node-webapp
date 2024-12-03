@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'git clone https://github.com/lsantos2729/node-webapp.git'
-                sh 'cd /home/lsantos/node-webapp'
+                sh 'cd /home/lsantos/workspace/node-app/node-webapp'
                 sh 'docker build -t node-app_image .'
             }
         }
