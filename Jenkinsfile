@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 3000:3000 node-app_image'
+                sh 'docker run -d --restart always -p 3000:3000 node-app_image'
             }
         }
     }
