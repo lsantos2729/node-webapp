@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                cd /home/lsantos/node-webapp 
+                sh 'cd /home/lsantos/node-webapp'
                 sh 'docker build -t node-app_image .'
             }
         }
